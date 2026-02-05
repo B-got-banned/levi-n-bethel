@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levi & Bethel</title>
+  <link rel="icon" href="/assets/logo.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <nav>
+    <div id="logo">
+      <img src="/assets/logo.png" alt="logo">
+      <h3>Levi <span style="color: #256af4">&</span> Bethel</h3>
+    </div>
+    <div id="pages">
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About Us</a>
+      <a href="./contact.html">Contact Us</a>
+      <a href="./faq.html">FAQs</a>
+      <a href="./biodata.html"><button>Tell us about you</button></a>
+    </div>
+  </nav>
+  <hr>
+  <div class="bio-head1">
+    <h1>Let's Get to Know <span>You</span></h1>
+    <p>We'd love to hear from you. Let's build something extraordinary together.</p>
+  </div>
+  <form action="" class="form1">
+    <div class="title">
+      <img src="/assets/mail.png" alt="mail">
+      <h3>Drop us a line</h3>
+    </div>
+    <div id="name-email">
+      <div id="name">
+        <label for="names">NAME</label>
+        <input type="text" id="names" placeholder="John Doe">
+      </div>
+      <div id="email">
+        <label for="emails">EMAIL</label>
+        <input type="email" id="emails" placeholder="john@example.com">
+      </div>
+    </div>
+    <div id="subject">
+      <label for="subjects">SUBJECT</label>
+      <input type="text" id="subjects" placeholder="How can we help?">
+    </div>
+    <div id="message">
+      <label for="messages">MESSAGE</label>
+      <textarea id="messages" placeholder="Tell us more..."></textarea>
+    </div>
+    <label id="show">
+      <input type="checkbox" id="show-more">
+       I have a project I would like to work on.
+    </label>
+    <div class="hidden" id="project-part">
+      <hr>
+      <div id="basics">
+        <h3>ℹ️ Project Basics</h3>
+        <label for="pname">PROJECT NAME</label>
+        <input type="text" id="pname" placeholder="What is the name of your venture?">
+        <div id="company-info">
+          <div id="comp-name">
+            <label for="company">COMPANY/ORGANIZATION</label>
+            <input type="text" placeholder="Where do you work?" id="company">
+          </div>
+          <div id="comp-role">
+            <label for="role">ROLE</label>
+            <input type="text" placeholder="Your Position" id="role">
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div id="budget">
+        <h3>🪙 Budget & Timeline</h3>
+        <div id="heads">
+          <label for="slider">ESTIMATED BUDGET RANGE</label>
+          <pre>SELECT RANGE</pre>
+        </div>
+        <div id="slide">
+          <input type="range"id="slider" min="1" max="5" step=".1" value="3" name="range">
+          <div id="labels">
+            <span>$5,000</span>
+            <span>$25,000</span>
+            <span>$50,000</span>
+            <span>$75,000</span>
+            <span>$100,000+</span>
+          </div>
+        </div>
+        <pre id="selected">SELECTED: <span id="slide-value">$50,000</span></pre>
+        <div id="heads2">
+          <label for="date">TARGET LAUNCH DATE</label>
+          <input type="date" id="date">
+        </div>
+      </div>
+      <hr>
+      <div id="details">
+        <h3>📄 Project Details</h3>
+        <label for="text-area">TELL US ABOUT YOUR VISION</label>
+        <textarea id="text-area" placeholder="Describe the problem you're solving, your goals, and any specific requirements..."></textarea>
+        <label>
+          <input type="checkbox"> I'm interested in long-term maintenance partnership
+        </label>
+      </div>
+    </div>
+    <div id="form-button">
+      <button type="submit">SEND MESSAGE <img src="/assets/send.png" alt=""></button>
+    </div>
+    <p>Expect a response within 24-48 business hours. We value your privacy.</p>
+  </form>
+  <div id="bio-head2">
+    <h3>Need immediate help?</h3>
+    <p>Schedule a quick 15-min discovery call if you're in a rush.</p>
+    <a href="./contact.html">Book a Call 📞</a>
+  </div>
+  <button id="backToTop">&uArr;</button>
+  <hr>
+  <footer>
+    <div>
+      <img src="/assets/logo.png" alt="logo">
+      <p>&copy; 2026 Levi & Bethel Studio. All rights reserved.</p>
+    </div>
+    <div>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+      <a href="#">Read CV</a>
+    </div>
+  </footer>
+  <script>
+    const backToTopBtn = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+    const checkbox = document.getElementById('show-more');
+    const projectPart = document.getElementById('project-part');
+
+    checkbox.addEventListener('change', () => {
+    projectPart.style.display = checkbox.checked ? 'block' : 'none';
+    });
+
+    const slider = document.getElementById('slider');
+    const output = document.getElementById('slide-value');
+    const labels = ["$5,000", "$25,000", "$50,000", "$75,000", "$100,000+"];
+
+    slider.addEventListener("input", () => {
+      if(slider.value == Math.round(slider.value)){
+        output.textContent = labels[Math.floor(slider.value) - 1] + "";
+      }
+      else{
+        output.textContent = labels[Math.floor(slider.value) - 1] + "+";
+      }
+    });
+</script>
+</body>
+</html>

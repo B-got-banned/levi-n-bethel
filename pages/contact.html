@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levi & Bethel</title>
+  <link rel="icon" href="/assets/logo.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <nav>
+    <div id="logo">
+      <img src="/assets/logo.png" alt="logo">
+      <h3>Levi <span style="color: #256af4">&</span> Bethel</h3>
+    </div>
+    <div id="pages">
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About Us</a>
+      <a href="./contact.html">Contact Us</a>
+      <a href="./faq.html">FAQs</a>
+      <a href="./biodata.html"><button>Tell us about you</button></a>
+    </div>
+  </nav>
+  <hr>
+  <div class="bio-head1">
+    <h1>Get in <span>Touch</span></h1>
+    <p>Tell us about your vision, and let's bring it to life with Levi & Bethel's collaborative expertise.</p>
+  </div>
+  <div class="form1" style="width: 70%;">
+    <div class="title">
+      <img src="/assets/bolt.png" alt="connect">
+      <h3>Connect with us</h3>
+    </div>
+    <div id="connect-div">
+      <div class="connect-box">
+        <div class="connect-cards">
+        <img src="/assets/levi.jpeg" alt="Levi" class="img-card">
+        <div class="contacts">
+          <div class="contact">
+          <img src="/assets/mail.png" alt="">
+          <a href="mailto:okontal6431@student.babcock.edu.ng" target="_blank">Email Levi</a>
+        </div>
+        <div class="contact">
+          <img src="/assets/whatsapp.png" alt="">
+          <a href="https://wa.me/2349130100937" target="_blank">WhatsApp Levi</a>
+        </div>
+        <div class="contact">
+          <img src="/assets/contact.png" alt="">
+          <a href="tel:09130100937" target="_blank">Call Levi</a>
+        </div>
+        </div>
+      </div>
+      <p>Connect with Levi</p>
+    </div>
+      <hr>
+      <div class="connect-box" style="flex-direction: row-reverse;">
+      <div class="connect-cards">
+        <img src="/assets/bethel.png" alt="Bethel" class="img-card">
+        <div class="contacts">
+          <div class="contact">
+          <img src="/assets/mail.png" alt="" target="_blank">
+          <a href="mailto:onyealilachib0850@student.babcock.edu.ng">Email Bethel</a>
+        </div>
+        <div class="contact">
+          <img src="/assets/whatsapp.png" alt="">
+          <a href="https://wa.me/2347079583047" target="_blank">WhatAapp Bethel</a>
+        </div>
+        <div class="contact">
+          <img src="/assets/contact.png" alt="" target="_blank">
+          <a href="tel:07079583047">Call Bethel</a>
+        </div>
+        </div>
+      </div>
+      <p>Connect with Bethel</p>
+      </div>
+    </div>
+  </div>
+  <div class="faq-box2" id="contact-faq">
+    <h1>QUICK ANSWERS</h1>
+    <p>Got questions? We’ve got answers—fast, clear,<br> and right here.</p>
+    <a href="./faq.html"><button>FIND OUT WHAT PEOPLE ARE ASKING</button></a>
+  </div>
+  <button id="backToTop">&uArr;</button>
+  <hr>
+  <footer>
+    <div>
+      <img src="/assets/logo.png" alt="logo">
+      <p>&copy; 2026 Levi & Bethel Studio. All rights reserved.</p>
+    </div>
+    <div>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+      <a href="#">Read CV</a>
+    </div>
+  </footer>
+  <script>
+    const backToTopBtn = document.getElementById("backToTop");
+
+
+    window.addEventListener("scroll", () => {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+</body>
+</html>

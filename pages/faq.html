@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levi & Bethel</title>
+  <link rel="icon" href="/assets/logo.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <nav>
+    <div id="logo">
+      <img src="/assets/logo.png" alt="logo">
+      <h3>Levi <span style="color: #256af4">&</span> Bethel</h3>
+    </div>
+    <div id="pages">
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About Us</a>
+      <a href="./contact.html">Contact Us</a>
+      <a href="./faq.html">FAQs</a>
+      <a href="./biodata.html"><button>Tell us about you</button></a>
+    </div>
+  </nav>
+  <hr>
+  <div id="faq-box1">
+    <h1>FREQUENTLY ASKED QUESTIONS</h1>
+    <p>Inside the minds of Levi & Bethel. Discover our process, tools, and how we bring digital visions to life.</p>
+  </div>
+  <div id="faqs">
+    <details>
+      <summary>Who are Levi & Bethel?</summary>
+      <p>We are a creative duo specializing in digital experiences, combining technical expertise with futuristic design aesthetics. Bethel handles the <span>Core Engineering</span> while Levi leads the <span>Visual Identity</span>. Together, we build products that exist at the intersection of function and art.</p>
+    </details>
+    <details>
+      <summary>What services do we provide?</summary>
+      <p>We offer a cohesive ecosystem of digital services designed to elevate brands into the future. Our core offerings include <span>End-to-End Product Development</span>, where we take a concept from initial wireframe to a fully functional, high-performance deployment. Additionally, we specialize in <span>Visual Systems & Branding</span>, creating immersive identities that resonate across digital landscapes, and <span>Interactive Motion Design</span> to ensure every user touchpoint feels fluid and intentional.</p>
+    </details>
+    <details>
+      <summary>How can we collaborate?</summary>
+      <p>Our process is built on high-touch partnership. We typically begin with a <span>Discovery Phase</span> to align our technical roadmap with your creative vision. Whether you are a startup looking for a groundbreaking MVP or an established brand seeking a visual overhaul, we operate through agile sprints to ensure transparency and rapid iteration. You can initiate the conversation by booking a consultation through our project portal—we prioritize projects that challenge the boundaries of conventional design.</p>
+    </details>
+    <details>
+      <summary>What tools do we use?</summary>
+      <p>We utilize a curated stack that balances cutting-edge performance with aesthetic flexibility. For visual architecture and interface design, we live in <span>Figma</span> and <span>Adobe Creative Cloud</span>. On the engineering front, we build robust, scalable products using <span>React, Next.js, and Three.js</span> for immersive 3D experiences. By leveraging modern frameworks and headless CMS solutions, we ensure that the "Art" Levi creates is supported by the unbreakable "Engine" Bethel builds.</p>
+    </details>
+  </div>
+
+  <div class="faq-box2">
+    <h1>STILL HAVE QUESTIONS?</h1>
+    <p>We're always open to new projects, collaborations, or<br> even just a virtual coffee chat.</p>
+    <a href="./contact.html"><button>REACH OUT TO US</button></a>
+  </div>
+  <button id="backToTop">&uArr;</button>
+  <hr>
+  <footer>
+    <div>
+      <img src="/assets/logo.png" alt="logo">
+      <p>&copy; 2026 Levi & Bethel Studio. All rights reserved.</p>
+    </div>
+    <div>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+      <a href="#">Read CV</a>
+    </div>
+  </footer>
+  <script>
+    const backToTopBtn = document.getElementById("backToTop");
+
+
+    window.addEventListener("scroll", () => {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levi & Bethel</title>
+  <link rel="icon" href="/assets/logo.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <nav>
+    <div id="logo">
+      <img src="/assets/logo.png" alt="logo">
+      <h3>Levi <span style="color: #256af4">&</span> Bethel</h3>
+    </div>
+    <div id="pages">
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About Us</a>
+      <a href="./contact.html">Contact Us</a>
+      <a href="./faq.html">FAQs</a>
+      <a href="./biodata.html"><button>Tell us about you</button></a>
+    </div>
+  </nav>
+  <hr>
+  <div id="home-box1">
+    <p>&cir; DIGITAL DESIGN STUDIO</p>
+    <h1>Levi <span style="color: #256af4">&</span> Bethel</h1>
+    <p>Defining the intersection of immersive design and high-performance technology. We build the future of the digital web.</p>
+  </div>
+  <div id="home-box2">
+    <a href="./about.html"><button id="b1">View Portfolio</button></a>
+    <a href="./faq.html"><button id="b2">Our Process</button></a>
+  </div>
+  <h2 style="margin-left: 30px;">The Duo Behind the Vision</h2>
+  <hr>
+  <div id="cards">
+    <div id="card1">
+      <img src="/assets/levi.jpeg" alt="Levi">
+      <p>Levi</p>
+      <p>CREATIVE DIRECTOR</p>
+      <p>Specialized in high-fidelity UI/UX and motion design. Levi ensures every pixel serves a purpose and every interaction feels like magic.</p>
+      <div id="links1">
+        <a href="#">Dribbble</a>
+        <a href="#">Behance</a>
+      </div>
+    </div>
+    <div id="card2">
+      <img src="/assets/bethel.png" alt="Bethel">
+      <p>Bethel</p>
+      <p>TECHNICAL DIRECTOR</p>
+      <p>Architect of scalable digital ecosystems. Bethel bridges the gap between complex engineering and seamless user experiences.</p>
+      <div id="links2">
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    
+    </div>
+  </div>
+  <div id="bottom-cards">
+    <div id="bottom-card1">
+      <p>✨</p>
+      <h3>Visual Strategy</h3>
+      <p>Developing unique brand identities that resonate in a crowded digital landscape.</p>
+    </div>
+    <div id="bottom-card2">
+      <p>🕸️</p>
+      <h3>Web Experience</h3>
+      <p>Building lightning-fast, responsive web applications with cutting-edge frameworks.</p>
+    </div>
+    <div id="bottom-card3">
+      <p>⌨️</p>
+      <h3>Backend Architecture</h3>
+      <p>Robust and secure infrastructures designed for massive scalability and speed.</p>
+    </div>
+  </div>
+  <button id="backToTop">&uArr;</button>
+  <hr>
+  <footer>
+    <div>
+      <img src="/assets/logo.png" alt="logo">
+      <p>&copy; 2026 Levi & Bethel Studio. All rights reserved.</p>
+    </div>
+    <div>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+      <a href="#">Read CV</a>
+    </div>
+  </footer>
+  <script>
+    const backToTopBtn = document.getElementById("backToTop");
+
+
+    window.addEventListener("scroll", () => {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+</body>
+</html>

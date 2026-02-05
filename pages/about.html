@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levi & Bethel</title>
+  <link rel="icon" href="/assets/logo.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <nav>
+    <div id="logo">
+      <img src="/assets/logo.png" alt="logo">
+      <h3>Levi <span style="color: #256af4">&</span> Bethel</h3>
+    </div>
+    <div id="pages">
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About Us</a>
+      <a href="./contact.html">Contact Us</a>
+      <a href="./faq.html">FAQs</a>
+      <a href="./biodata.html"><button>Tell us about you</button></a>
+    </div>
+  </nav>
+  <hr>
+  <div id="about-head">
+    <pre>OUR STORY</pre>
+    <h1>The Duo Behind the Design</h1>
+    <p>Merging high-fidelity visual aesthetics with robust technical <br>architecture since 2021.</p>
+  </div>
+  <div id="about-boxes">
+    <div id="timeline">
+      <div class="title">
+        <img src="/assets/launch.png" alt="">
+        <h3>Collaboration Timeline</h3>
+      </div>
+      <div id="time">
+        <input type="range" min="1" max="4" value="1" id="timeline-slider" step=".1">
+        <div id="timeline-labels">
+          <p>The Spark <br><span>2021</span></p>
+          <p>Digital Collective <br><span>2022</span></p>
+          <p>Studio Founded <br><span>2023</span></p>
+          <p>Global Reach <br><span>Present</span></p>
+        </div>
+        <p id="timeline-progress">First collaborative UI project on a fintech application. Discovered a shared passion for neon aesthetics.
+        </p>
+      </div>
+
+    </div>
+    <div id="about-us">
+      <div class="about-cards">
+        <div class="card-head">
+          <h1>Levi</h1>
+          <p>UI/UX & Motion Artist</p>
+        </div>
+        <div class="about-card">
+          <img src="/assets/levi.jpeg" alt="" class="about-img">
+          <p>Levi is the visionary architect behind the visual soul of our projects. With over 8 years of experience in product design, he specializes in creating high-fidelity prototypes and dark-themed interfaces that feel like the future.</p>
+          <div class="skills">
+            <span>INTERFACE DESIGN</span>
+            <span>AFTER EFFECTS</span>
+            <span>INTERACTION</span>
+            <span>WEB3 UI</span>
+          </div>
+          <hr>
+          <div class="bottom-bit">
+            <div class="icons">
+              <img src="/assets/mail.png" alt="">
+              <img src="/assets/globe.png" alt="">
+              <img src="/assets/question.png" alt="">
+            </div>
+            <a href="#">View Portfolio</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="about-cards">
+        <div class="card-head">
+          <h1>Bethel</h1>
+          <p>Lead Developer & Systems Architect</p>
+        </div>
+        <div class="about-card">
+          <img src="/assets/bethel.png" alt="" class="about-img">
+          <p>Bethel transforms abstract concepts into high-performance digital reality. A full-stack powerhouse, she ensures that every pixel-perfect design is backed by robust, scalable, and secure codebases.</p>
+          <div class="skills">
+            <span>REACT / NEXT.JS</span>
+            <span>NODE.JS</span>
+            <span>AWS</span>
+            <span>THREE.JS</span>
+          </div>
+          <hr>
+          <div class="bottom-bit">
+            <div class="icons">
+              <img src="/assets/gear.png" alt="">
+              <img src="/assets/code.png" alt="">
+              <img src="/assets/bolt.png" alt="">
+            </div>
+            <a href="#">View GitHub</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="about-bottom">
+    <h3>Ready to build the future?</h3>
+    <p>Let's discuss your vision and how our duo can help bring it to life. <br>We're only a few clicks away</p>
+    <a href="./biodata.html">Start a Project</a>
+  </div>
+  <button id="backToTop">&uArr;</button>
+  <hr>
+  <footer>
+    <div>
+      <img src="/assets/logo.png" alt="logo">
+      <p>&copy; 2026 Levi & Bethel Studio. All rights reserved.</p>
+    </div>
+    <div>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+      <a href="#">Read CV</a>
+    </div>
+  </footer>
+  <script>
+    const backToTopBtn = document.getElementById("backToTop");
+
+
+    window.addEventListener("scroll", () => {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+    const slider = document.getElementById("timeline-slider");
+    const progress = document.getElementById("timeline-progress");
+    const points = ["First collaborative Ul project on a fintech application. Discovered a shared passion for neon aesthetics.",
+    "Formalized as a design-dev duo. Launched three award-winning crypto-portals.",
+    "Established 'Levi & Bethel' Creative Studio in London. Expanded focus to immersive web experiences.",
+    "Partnering with international tech giants to redefine modern web interaction design."];
+
+    slider.addEventListener("input", () =>{
+      progress.textContent = points[Math.floor(slider.value) - 1]
+    })
+</script>
+</body>
+</html>
