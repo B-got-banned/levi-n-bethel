@@ -19,7 +19,7 @@
 }
 body {
   font-family: 'JetBrainsMono', monospace;
-  height: 100vh;
+  min-height: 100vh;
   color: #ffffff;
   margin: 0;
   background: linear-gradient(45deg, #0a0a0a, hsl(220, 90%, 10%));
@@ -27,6 +27,7 @@ body {
   animation: bgmove 5s ease infinite;
   font-size: 15px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, a, footer p, #cards, #faq-box1, #faqs, .faq-box2, #bio-head1, label, #about-head, pre{
@@ -46,8 +47,11 @@ hr{
 /*Home page*/
 nav{
   display: flex;
-  height: 60px;
+  min-height: 60px;
+  height: auto;
   justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
 }
 #logo{
   display: flex;
@@ -65,13 +69,15 @@ nav{
   padding: 15px 0 5px 0;
   text-align: center;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 #pages a, #links1 a, #links2 a{
   text-decoration: none;
   color: hsl(0, 3%, 70%);
-  text-align: center;
   font-weight: bold;
   position: relative;
+  font-size: 14px;
 }
 #pages a::after, footer a::after, #links1 a::after, #links2 a::after {
   content: "";
@@ -107,8 +113,13 @@ nav{
 
 footer{
   display: flex;
-  height: 100px;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 100px;
+  height: auto;
+  padding: 20px;
+  justify-content: center;
+  gap: 50px;
+  text-align: center;
   color: hsl(249, 3%, 50%);
   font-size: 15px;
   
@@ -166,7 +177,8 @@ footer div:nth-child(2){
 #home-box1{
   display: flex;
   flex-direction: column;
-  width: 500px;
+  max-width: 500px;
+  width: 90%;
   text-align: center;
   margin: auto;
   padding-top: 50px;
@@ -233,18 +245,23 @@ a #b2{
 
 #cards{
   display: flex;
+  flex-wrap: wrap;
   width: 90%;
-  margin: auto;
-  margin-top: 50px;
+  margin: 50px auto;
   gap: 30px;
+  justify-content: center;
 }
 #cards img{
-  height: 600px;
+  width: 100%;
+  height: auto;
+  max-height: 600px;
   filter: grayscale(100%);
   border-radius: 15px;
   margin: auto;
 }
 #card1, #card2{
+  flex: 1;
+  min-width: 300px;
   background-color: hsla(0, 0%, 5%, 0.587);
   display: flex;
   flex-direction: column;
@@ -303,15 +320,16 @@ a #b2{
 
 #bottom-cards{
   display: flex;
+  flex-wrap: wrap;
   font-family: 'SpaceHeadings', sans-serif;
-  margin: auto;
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin: 70px auto;
   gap: 30px;
   width: 90%;
 
 }
 #bottom-card1, #bottom-card2, #bottom-card3{
+  flex: 1;
+  min-width: 250px;
   background-color: hsla(0, 0%, 4%, 0.274);
   border: 1px solid hsla(0, 0%, 14%, 0.584);
   border-radius: 15px;
@@ -485,15 +503,14 @@ a #b2{
 .form1{
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: 50px auto 70px;
   align-items: center;
-  width: 60%;
+  width: 90%;
+  max-width: 800px;
   background-color: hsla(200, 3%, 19%, 0.386);
   border: 1.5px solid hsla(200, 3%, 19%, 0.434);
   border-radius: 15px;
-  margin-top: 50px;
   padding: 20px;
-  margin-bottom: 70px;
   transition: all 0.3s ease;
 }
 .form1:hover{
@@ -511,10 +528,15 @@ a #b2{
   padding: 23px 10px 10px 10px;
   overflow: clip;
 }
-#name-email{
+#name-email, #company-info{
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  gap: 30px
+  gap: 20px
+}
+
+#company-info{
+  gap: 30px;
 }
 #name, #email, #subject, #message{
   display: flex;
@@ -522,8 +544,9 @@ a #b2{
   gap: 5px;
 }
 
-#name, #email{
-  width: 50%;
+#name, #email, #comp-name, #comp-role{
+  flex: 1;
+  min-width: 200px;
 }
 
 input, textarea{
@@ -592,12 +615,11 @@ input[type="checkbox"]:checked{
   gap: 5px;
   margin-bottom: 45px;
 }
-#company-info{
-  display: flex;
-  width: 100%;
-  margin-top: 25px;
-  justify-content: space-between;
+
+#pname{
+  margin-bottom: 20px;
 }
+
 #comp-name, #comp-role{
   display: flex;
   flex-direction: column;
@@ -890,21 +912,27 @@ input[type="checkbox"]:checked{
 }
 #about-boxes{
   display: flex;
-  margin: auto;
+  flex-wrap: wrap;
   width: 100%;
+  gap: 20px;
 }
 #timeline{
+  flex: 1;
   display:flex;
   flex-direction: column;
-  align-items: center;
   background-color: hsla(218, 37%, 28%, 0.302);
+  margin: 0 20px;
   margin-left: 30px;
   width: 22%;
   padding: 15px;
   padding-right: 0;
   border-radius: 10px;
   border: 1.5px solid hsla(218, 37%, 40%, 0.302);
-  height: 550px;
+  max-height: 520px;
+  height: auto;
+}
+#timeline .title{
+  width: 50%;
 }
 #timeline .title img{
   margin-top: 15px;
@@ -962,22 +990,21 @@ input[type="checkbox"]:checked{
 #timeline-progress{
   width: 20%;
   height: max-content;
-  margin: 80px 0 0 15px;
-  font-size: 75%;
-  padding: 15px 23px 15px 15px;
+  margin: 80px 0 0 50px;
+  font-size: 80%;
+  padding: 15px;
   background-color: hsla(218, 37%, 28%, 0.302);
   border-radius: 10px;
   border: 1px solid #256af44e;
   color: hsla(0, 0%, 100%, 0.799);
 }
 #about-us{
+  flex: 2;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  width: 75%;
-  margin: auto;
-  margin-left: 70px;
-  margin-top: -25px;
+  gap: 30px;
+  min-width: 300px;
+  margin: 0 20px;
 }
 
 .card-head{
@@ -1111,4 +1138,92 @@ input[type="checkbox"]:checked{
 
 #about-bottom a:hover{
   scale: 1.02;
+}
+
+/* --- MEDIA QUERIES FOR MOBILE DEVICES --- */
+@media (max-width: 768px) {
+  #home-box1 h1 {
+    font-size: 3rem;
+    scale: 1;
+  }
+
+  #home-box1 p:nth-child(1) {
+    width: 80%;
+  }
+
+  nav {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #pages {
+    gap: 15px;
+  }
+
+  .bio-head1 {
+    margin-left: 20px;
+    width: 90%;
+  }
+
+  .bio-head1 h1 {
+    font-size: 2.5rem;
+  }
+
+  #faq-box1 {
+    width: 90%;
+  }
+
+  #faqs {
+    width: 90%;
+  }
+
+  #about-head h1 {
+    font-size: 2.5rem;
+  }
+
+  #timeline {
+    order: 2;
+  }
+
+  #time {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #timeline-slider {
+    rotate: 0deg;
+    margin: 20px 0;
+    width: 100%;
+    scale: 1;
+  }
+
+  #timeline-progress {
+    width: 90%;
+    margin: 20px 0;
+  }
+
+  .connect-box {
+    flex-direction: column !important;
+  }
+
+  .connect-cards {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .img-card {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+
+  #form-button {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  #form-button button {
+    width: 100%;
+  }
 }
